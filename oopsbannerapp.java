@@ -1,13 +1,13 @@
 public class oopsbannerapp {
     public static void main(String[] args) {
 
-        // Store banner lines in a String array
+        // Declare and initialize banner lines using String.join()
         String[] bannerLines = {
-            " *****    *****    *****     ***** ",
-            "*     *  *     *  *     *   *      ",
-            "*     *  *     *  *****     *****  ",
-            "*     *  *     *  *              * ",
-            " *****    *****   *         *****"
+            String.join("", " *****  ", " *****  ", " *****   ", " ***** "),
+            String.join("", "*     * ", "*     * ", "*     *  ", "*      "),
+            String.join("", "*     * ", "*     * ", " *****   ", " ***** "),
+            String.join("", "*     * ", "*     * ", " *       ", "     * "),
+            String.join("", " *****  ", " *****  ", " *       ", " ***** ")
         };
 
         // Print banner using a loop
