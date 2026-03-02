@@ -1,24 +1,18 @@
-public class OOPSBannerApp {
+public class oopsbannerapp {
     public static void main(String[] args) {
 
-        System.out.println(String.join("",
-                " *****  ", " *****  ", " *****   ", " ***** "
-        ));
+        // Store banner lines in a String array
+        String[] bannerLines = {
+            " *****    *****    *****     ***** ",
+            "*     *  *     *  *     *   *      ",
+            "*     *  *     *  *****     *****  ",
+            "*     *  *     *  *              * ",
+            " *****    *****   *         *****"
+        };
 
-        System.out.println(String.join("",
-                "*     * ", "*     * ", "*     *  ", "*      "
-        ));
-
-        System.out.println(String.join("",
-                "*     * ", "*     * ", " *****   ", " ***** "
-        ));
-
-        System.out.println(String.join("",
-                "*     * ", "*     * ", " *       ", " *      "
-        ));
-
-        System.out.println(String.join("",
-                " *****  ", " *****  ", " *       ", " ***** "
-        ));
+        // Print banner using a loop
+        for (String line : bannerLines) {
+            System.out.println(line);
+        }
     }
 }
