@@ -1,18 +1,53 @@
 public class oopsbannerapp {
+
+    // Method to generate letter O
+    static String[] letterO() {
+        return new String[]{
+            " ***** ",
+            "*     *",
+            "*     *",
+            "*     *",
+            " ***** "
+        };
+    }
+
+    // Method to generate letter P
+    static String[] letterP() {
+        return new String[]{
+            " ***** ",
+            "*     *",
+            " ***** ",
+            "*      ",
+            "*      "
+        };
+    }
+
+    // Method to generate letter S
+    static String[] letterS() {
+        return new String[]{
+            " ***** ",
+            "*      ",
+            " ***** ",
+            "      *",
+            " ***** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        // Declare and initialize banner lines using String.join()
-        String[] bannerLines = {
-            String.join("", " *****  ", " *****  ", " *****   ", " ***** "),
-            String.join("", "*     * ", "*     * ", "*     *  ", "*      "),
-            String.join("", "*     * ", "*     * ", " *****   ", " ***** "),
-            String.join("", "*     * ", "*     * ", " *       ", "     * "),
-            String.join("", " *****  ", " *****  ", " *       ", " ***** ")
-        };
+        String[] O1 = letterO();
+        String[] O2 = letterO();
+        String[] P  = letterP();
+        String[] S  = letterS();
 
-        // Print banner using a loop
-        for (String line : bannerLines) {
-            System.out.println(line);
+        // Build and print banner
+        for (int i = 0; i < O1.length; i++) {
+            System.out.println(
+                O1[i] + "  " +
+                O2[i] + "  " +
+                P[i]  + "  " +
+                S[i]
+            );
         }
     }
 }
