@@ -5,22 +5,22 @@ public class Week3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        double number1 = sc.nextDouble();
+        System.out.print("Enter a natural number: ");
+        int number = sc.nextInt();
 
-        System.out.print("Enter second number: ");
-        double number2 = sc.nextDouble();
+        if (number <= 0) {
+            System.out.println("Please enter a natural number greater than 0.");
+        } else {
+            for (int i = 1; i <= number; i++) {
 
-        System.out.print("Enter third number: ");
-        double number3 = sc.nextDouble();
+                if (i % 2 == 0) {
+                    System.out.println(i + " is an Even number");
+                } else {
+                    System.out.println(i + " is an Odd number");
+                }
 
-        boolean isFirstLargest = (number1 > number2) && (number1 > number3);
-        boolean isSecondLargest = (number2 > number1) && (number2 > number3);
-        boolean isThirdLargest = (number3 > number1) && (number3 > number2);
-
-        System.out.println("Is the first number the largest? " + isFirstLargest);
-        System.out.println("Is the second number the largest? " + isSecondLargest);
-        System.out.println("Is the third number the largest? " + isThirdLargest);
+            }
+        }
 
         sc.close();
     }
