@@ -1,12 +1,9 @@
 public class Week1 {
     public static void main(String[] args) {
         
-        int maths = 94;
-        int physics = 95;
-        int chemistry = 96;
+        double kilometers = 10.8;
+        double miles = kilometers * 1.6;   // Given: 1 km = 1.6 miles
         
-        double average = (maths + physics + chemistry) / 3.0;
-        
-        System.out.println("Sam’s average mark in PCM is " + average + "%");
+        System.out.println("The distance " + kilometers + " km in miles is " + miles);
     }
 }
