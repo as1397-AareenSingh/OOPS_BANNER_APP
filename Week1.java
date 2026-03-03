@@ -2,27 +2,24 @@ import java.util.Scanner;
 
 public class Week1 {
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Enter first number: ");
-        double number1 = sc.nextDouble();
-        
-        System.out.print("Enter second number: ");
-        double number2 = sc.nextDouble();
-        
-        double addition = number1 + number2;
-        double subtraction = number1 - number2;
-        double multiplication = number1 * number2;
-        double division = number1 / number2;
-        
-        System.out.println("The addition, subtraction, multiplication, and division value of 2 numbers "
-                + number1 + " and " + number2 + " is "
-                + addition + ", "
-                + subtraction + ", "
-                + multiplication + ", and "
-                + division);
-        
+
+        System.out.print("Enter base in cm: ");
+        double base = sc.nextDouble();
+
+        System.out.print("Enter height in cm: ");
+        double height = sc.nextDouble();
+
+        // Area in square centimeters
+        double areaSqCm = 0.5 * base * height;
+
+        // Convert sq cm to sq inches
+        double areaSqIn = areaSqCm / 6.4516;
+
+        System.out.println("The Area of the triangle in sq in is "
+                + areaSqIn + " and sq cm is " + areaSqCm);
+
         sc.close();
     }
 }
