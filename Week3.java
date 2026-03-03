@@ -5,12 +5,18 @@ public class Week3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
+        System.out.print("Enter first number: ");
+        double number1 = sc.nextDouble();
 
-        boolean isDivisible = (number % 5 == 0);
+        System.out.print("Enter second number: ");
+        double number2 = sc.nextDouble();
 
-        System.out.println("Is the number " + number + " divisible by 5? " + isDivisible);
+        System.out.print("Enter third number: ");
+        double number3 = sc.nextDouble();
+
+        boolean isSmallest = (number1 < number2) && (number1 < number3);
+
+        System.out.println("Is the first number the smallest? " + isSmallest);
 
         sc.close();
     }
