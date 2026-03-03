@@ -1,17 +1,63 @@
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Week3 {
-    public static void main(String[] args) {
+class CharacterPattern {
 
-        Scanner sc = new Scanner(System.in);
+    private char character;
+    private String[] pattern;
 
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
+    public CharacterPattern(char character, String[] pattern) {
+        this.character = character;
+        this.pattern = pattern;
+    }
 
-        boolean isDivisible = (number % 5 == 0);
+    public char getCharacter() {
+        return character;
+    }
 
-        System.out.println("Is the number " + number + " divisible by 5? " + isDivisible);
-
-        sc.close();
+    public String[] getPattern() {
+        return pattern;
     }
 }
+
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+
+        // Store character patterns
+        Map<Character, CharacterPattern> patternMap = new HashMap<>();
+
+        patternMap.put('O', new CharacterPattern('O', new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        }));
+
+        patternMap.put('P', new CharacterPattern('P', new String[]{
+                " ***** ",
+                "*     *",
+                " ***** ",
+                "*      ",
+                "*      "
+        }));
+
+        patternMap.put('S', new CharacterPattern('S', new String[]{
+                " ***** ",
+                "*      ",
+                " ***** ",
+                "      *",
+                " ***** "
+        }));
+
+        String word = "OOPS";
+
+        // Display banner
+        for (int row = 0; row < 5; row++) {
+            for (char ch : word.toCharArray()) {
+                System.out.print(patternMap.get(ch).getPattern()[row] + "  ");
+            }
+            System.out.println();
+        }
+    }
