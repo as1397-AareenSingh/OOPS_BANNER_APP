@@ -1,11 +1,12 @@
 public class Week1 {
     public static void main(String[] args) {
         
-        int birthYear = 2000;
-        int currentYear = 2024;
+        int maths = 94;
+        int physics = 95;
+        int chemistry = 96;
         
-        int age = currentYear - birthYear;
+        double average = (maths + physics + chemistry) / 3.0;
         
-        System.out.println("Harry's age in 2024 is " + age);
+        System.out.println("Sam’s average mark in PCM is " + average + "%");
     }
 }
