@@ -5,20 +5,13 @@ public class Week1 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter base in cm: ");
-        double base = sc.nextDouble();
+        System.out.print("Enter temperature in Celsius: ");
+        double celsius = sc.nextDouble();
 
-        System.out.print("Enter height in cm: ");
-        double height = sc.nextDouble();
+        double fahrenheitResult = (celsius * 9 / 5) + 32;
 
-        // Area in square centimeters
-        double areaSqCm = 0.5 * base * height;
-
-        // Convert sq cm to sq inches
-        double areaSqIn = areaSqCm / 6.4516;
-
-        System.out.println("The Area of the triangle in sq in is "
-                + areaSqIn + " and sq cm is " + areaSqCm);
+        System.out.println("The " + celsius + " celsius is " 
+                           + fahrenheitResult + " fahrenheit");
 
         sc.close();
     }
