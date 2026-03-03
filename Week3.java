@@ -5,22 +5,19 @@ public class Week3 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a natural number: ");
-        int number = sc.nextInt();
+        System.out.print("Enter salary: ");
+        double salary = sc.nextDouble();
 
-        if (number <= 0) {
-            System.out.println("Please enter a natural number greater than 0.");
-        } else {
-            for (int i = 1; i <= number; i++) {
+        System.out.print("Enter years of service: ");
+        int years = sc.nextInt();
 
-                if (i % 2 == 0) {
-                    System.out.println(i + " is an Even number");
-                } else {
-                    System.out.println(i + " is an Odd number");
-                }
+        double bonus = 0;
 
-            }
+        if (years > 5) {
+            bonus = salary * 0.05;   // 5% bonus
         }
+
+        System.out.println("The bonus amount is " + bonus);
 
         sc.close();
     }
