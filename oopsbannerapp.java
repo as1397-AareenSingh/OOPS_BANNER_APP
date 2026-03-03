@@ -3,16 +3,10 @@ import java.util.Map;
 
 class CharacterPattern {
 
-    private char character;
     private String[] pattern;
 
-    public CharacterPattern(char character, String[] pattern) {
-        this.character = character;
+    public CharacterPattern(String[] pattern) {
         this.pattern = pattern;
-    }
-
-    public char getCharacter() {
-        return character;
     }
 
     public String[] getPattern() {
@@ -20,14 +14,13 @@ class CharacterPattern {
     }
 }
 
-public class oopsbannerapp {
+class PatternRepository {
 
-    public static void main(String[] args) {
+    private static final Map<Character, CharacterPattern> patternMap = new HashMap<>();
 
-        // Store character patterns
-        Map<Character, CharacterPattern> patternMap = new HashMap<>();
-
-        patternMap.put('O', new CharacterPattern('O', new String[]{
+    // Static block initializes patterns once
+    static {
+        patternMap.put('O', new CharacterPattern(new String[]{
                 " ***** ",
                 "*     *",
                 "*     *",
@@ -35,7 +28,7 @@ public class oopsbannerapp {
                 " ***** "
         }));
 
-        patternMap.put('P', new CharacterPattern('P', new String[]{
+        patternMap.put('P', new CharacterPattern(new String[]{
                 " ***** ",
                 "*     *",
                 " ***** ",
@@ -43,20 +36,31 @@ public class oopsbannerapp {
                 "*      "
         }));
 
-        patternMap.put('S', new CharacterPattern('S', new String[]{
+        patternMap.put('S', new CharacterPattern(new String[]{
                 " ***** ",
                 "*      ",
                 " ***** ",
                 "      *",
                 " ***** "
         }));
+    }
+
+    // Central lookup method
+    public static CharacterPattern getPattern(char ch) {
+        return patternMap.get(Character.toUpperCase(ch));
+    }
+}
+
+public class oopsbannerapp {
+
+    public static void main(String[] args) {
 
         String word = "OOPS";
 
-        // Display banner
         for (int row = 0; row < 5; row++) {
             for (char ch : word.toCharArray()) {
-                System.out.print(patternMap.get(ch).getPattern()[row] + "  ");
+                String[] pattern = PatternRepository.getPattern(ch).getPattern();
+                System.out.print(pattern[row] + "  ");
             }
             System.out.println();
         }
