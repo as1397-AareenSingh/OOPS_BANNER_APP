@@ -6,43 +6,46 @@ public class oopsbannerapp
     {
         Scanner sc = new Scanner(System.in);
 
-        String names[] = {"Amar", "Akbar", "Anthony"};
-        int age[] = new int[3];
-        double height[] = new double[3];
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
 
-        // Taking input
-        for(int i = 0; i < 3; i++)
+        int temp = number;
+        int count = 0;
+
+        // Count digits
+        while(temp != 0)
         {
-            System.out.print("Enter age of " + names[i] + ": ");
-            age[i] = sc.nextInt();
-
-            System.out.print("Enter height of " + names[i] + ": ");
-            height[i] = sc.nextDouble();
+            count++;
+            temp = temp / 10;
         }
 
-        // Finding youngest
-        int youngestIndex = 0;
-        for(int i = 1; i < 3; i++)
+        int digits[] = new int[count];
+        int freq[] = new int[10];
+
+        temp = number;
+
+        // Store digits in array
+        for(int i = count - 1; i >= 0; i--)
         {
-            if(age[i] < age[youngestIndex])
+            digits[i] = temp % 10;
+            temp = temp / 10;
+        }
+
+        // Calculate frequency
+        for(int i = 0; i < digits.length; i++)
+        {
+            freq[digits[i]]++;
+        }
+
+        // Display frequency
+        System.out.println("Digit Frequency:");
+        for(int i = 0; i < freq.length; i++)
+        {
+            if(freq[i] > 0)
             {
-                youngestIndex = i;
+                System.out.println("Digit " + i + " occurs " + freq[i] + " times");
             }
         }
-
-        // Finding tallest
-        int tallestIndex = 0;
-        for(int i = 1; i < 3; i++)
-        {
-            if(height[i] > height[tallestIndex])
-            {
-                tallestIndex = i;
-            }
-        }
-
-        // Display results
-        System.out.println("Youngest friend is: " + names[youngestIndex] + " with age " + age[youngestIndex]);
-        System.out.println("Tallest friend is: " + names[tallestIndex] + " with height " + height[tallestIndex]);
 
         sc.close();
     }
