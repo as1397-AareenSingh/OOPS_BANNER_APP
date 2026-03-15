@@ -5,51 +5,23 @@ public class oopsbannerapp
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        int num[] = new int[5];
 
-        // Taking input
-        for(int i = 0; i < num.length; i++)
-        {
-            System.out.print("Enter number " + (i+1) + ": ");
-            num[i] = sc.nextInt();
-        }
+        int number;
+        int table[] = new int[10];
 
-        // Checking numbers
-        for(int i = 0; i < num.length; i++)
+        System.out.print("Enter a number: ");
+        number = sc.nextInt();
+
+        // Storing multiplication results
+        for(int i = 1; i <= 10; i++)
         {
-            if(num[i] > 0)
-            {
-                if(num[i] % 2 == 0)
-                {
-                    System.out.println(num[i] + " is positive and even.");
-                }
-                else
-                {
-                    System.out.println(num[i] + " is positive and odd.");
-                }
-            }
-            else if(num[i] < 0)
-            {
-                System.out.println(num[i] + " is negative.");
-            }
-            else
-            {
-                System.out.println(num[i] + " is zero.");
-            }
+            table[i-1] = number * i;
         }
 
-        // Comparing first and last element
-        if(num[0] == num[4])
+        // Displaying the multiplication table
+        for(int i = 1; i <= 10; i++)
         {
-            System.out.println("First and last elements are equal.");
-        }
-        else if(num[0] > num[4])
-        {
-            System.out.println("First element is greater than last element.");
-        }
-        else
-        {
-            System.out.println("First element is less than last element.");
+            System.out.println(number + " * " + i + " = " + table[i-1]);
         }
 
         sc.close();
