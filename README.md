@@ -1,13 +1,13 @@
 OOPS Banner App
 
-📌 Project Description
+Project Description
 
 This project is a Java-based application that displays the word "OOPS" in a banner format using "*" characters.
 It demonstrates core Object-Oriented Programming (OOP) concepts and structured programming techniques.
 
 ---
 
-🎯 Objectives
+Objectives
 
 - Understand and implement Java basics
 - Practice Object-Oriented Programming
@@ -16,7 +16,7 @@ It demonstrates core Object-Oriented Programming (OOP) concepts and structured p
 
 ---
 
-🚀 Features
+Features
 
 - Displays "OOPS" banner
 - Uses "*" characters for pattern printing
@@ -30,14 +30,14 @@ It demonstrates core Object-Oriented Programming (OOP) concepts and structured p
 
 ---
 
-🛠️ Technologies Used
+Used
 
 - Java
 - Git & GitHub
 
 ---
 
-📂 Project Structure
+Project Structure
 
 OOPS_BANNER_APP/
 │── oopsbannerapp.java
@@ -46,7 +46,7 @@ OOPS_BANNER_APP/
 
 ---
 
-▶️ How to Run
+How to Run
 
 1. Clone the repository:
    
@@ -60,8 +60,7 @@ OOPS_BANNER_APP/
 java oopsbannerapp
 
 ---
-
-📚 Learning Outcomes
+Learning Outcomes
 
 - Gained understanding of OOP concepts
 - Learned code optimization techniques
@@ -69,12 +68,12 @@ java oopsbannerapp
 
 ---
 
-👨‍💻 Author
+Author
 
 Aareen Singh
 
 ---
 
-⭐ Notes
+Notes
 
 This project is part of academic assignments and practice for improving Java programming skills.
